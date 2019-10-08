@@ -1,3 +1,5 @@
+package SharePurchases;
+
 import java.util.HashMap;
 
 public class SharePurchases {
