@@ -1,4 +1,0 @@
-package longestsubstringwithoutrepeatingcharacter;
-
-public class LongestSubstringWithoutRepeatingCharacters {
-}

@@ -1,4 +1,4 @@
-package BestTImeStocks;
+package besttimestocks;
 
 public class BestTimeStocks {
     public int maxProfit(int[] prices) {

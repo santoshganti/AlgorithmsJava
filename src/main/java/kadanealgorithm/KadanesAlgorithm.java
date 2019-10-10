@@ -1,4 +1,4 @@
-package KadaneAlgorithm;
+package kadanealgorithm;
 
 public class KadanesAlgorithm {
 }

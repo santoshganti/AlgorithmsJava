@@ -21,12 +21,17 @@ public class Stack {
         return top.data;
     }
 
+    //Move the
     public void push(int data) {
         Node node = new Node(data);
+        node.next = top;
+        top = node;
 
     }
 
-    public int pop(){
-        return 0;
+    public int pop() {
+        int data = top.data;
+        top = top.next;
+        return data;
     }
 }

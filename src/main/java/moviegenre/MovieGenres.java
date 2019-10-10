@@ -1,4 +1,4 @@
-package MovieGenre;
+package moviegenre;
 
 import java.util.ArrayList;
 import java.util.HashMap;
