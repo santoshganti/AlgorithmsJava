@@ -5,10 +5,6 @@ import java.util.Stack;
 public class BalancedParanthesis {
     private static char[][] TOKENS = {{'{', '}'}, {'[', ']'}, {'(', ')'}};
 
-    public static void main(String[] args) {
-        System.out.println(isBalanced("[])"));
-    }
-
     private static boolean openTerm(char c) {
         for (char[] array : TOKENS) {
             if (array[0] == c) {
@@ -28,6 +24,7 @@ public class BalancedParanthesis {
     }
 
     public static boolean isBalanced(String expression) {
+        expression = expression.replaceAll("\\s+","");
         Stack<Character> stack = new Stack<Character>();
         for (char c : expression.toCharArray()) {
             if (openTerm(c)) {
@@ -39,5 +36,9 @@ public class BalancedParanthesis {
             }
         }
         return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isBalanced("{ ( [ ( ) ] ) }"));
     }
 }
