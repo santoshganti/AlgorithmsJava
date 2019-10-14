@@ -1,4 +1,4 @@
-package arrays;
+package arrays.arrayrotation;
 
 public class ArrayRotationInPlace {
 }
