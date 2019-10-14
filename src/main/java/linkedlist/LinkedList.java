@@ -1,18 +1,26 @@
 package linkedlist;
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int d) {
-        data = d;
-        next = null;
-    }
-}
-
 public class LinkedList {
 
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int d) {
+            data = d;
+            next = null;
+        }
+    }
+
     Node head;
+
+    private void printList() {
+        Node n = head;
+        while (n != null) {
+            System.out.println(n.data + " ");
+            n = n.next;
+        }
+    }
 
     private void push(int new_data) {
         Node new_node = new Node(new_data);
@@ -123,11 +131,11 @@ public class LinkedList {
         System.out.println(temp.data);
     }
 
-    public  int printMiddle(){
+    public int printMiddle() {
         Node slowPointer = head;
         Node fastPointer = head;
         if (head != null) {
-            while(fastPointer != null && slowPointer != null){
+            while (fastPointer != null && slowPointer != null) {
                 fastPointer = fastPointer.next.next;
                 slowPointer = slowPointer.next;
             }
@@ -135,28 +143,73 @@ public class LinkedList {
         return slowPointer.data;
     }
 
-    public void detectLoop(){
+    public boolean detectLoop() {
         Node slowPointer = head;
         Node fastPointer = head;
 
-    }
+        while (slowPointer != null && fastPointer != null) {
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
 
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-
-        list.append(6);
-        list.push(7);
-        list.push(1);
-        list.append(4);
-        list.insertAfter(list.head.next, 8);
-        list.printList();
-    }
-
-    private void printList() {
-        Node n = head;
-        while (n != null) {
-            System.out.println(n.data + " ");
-            n = n.next;
+            if (slowPointer == fastPointer) {
+                return true;
+            }
         }
+        return false;
     }
+
+    public static int countNodes(Node head) {
+        int res = 1;
+        Node temp = head;
+        while (temp != null) {
+            res++;
+            temp = temp.next;
+        }
+
+        return res;
+    }
+
+    public static int countLoops(Node head) {
+        Node slowPointer = head;
+        Node fastPointer = head;
+
+        while(slowPointer != null && fastPointer != null){
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+
+            if(slowPointer == fastPointer){
+                return countNodes(slowPointer);
+            }
+        }
+        return 0;
+    }
+
+    static Node newNode(int key) {
+        Node temp = new Node(key);
+
+        return temp;
+    }
+    public static void main(String[] args) {
+//        LinkedList list = new LinkedList();
+//
+//        list.append(6);
+//        list.push(7);
+//        list.push(1);
+//        list.append(4);
+//        list.insertAfter(list.head.next, 8);
+//        list.printList();
+
+        Node head = newNode(1);
+        head.next = newNode(2);
+        head.next.next = newNode(3);
+        head.next.next.next = newNode(4);
+        head.next.next.next.next = newNode(5);
+
+        /* Create a loop for testing */
+        head.next.next.next.next.next = head.next;
+
+        System.out.println(countLoops(head));
+    }
+
+
 }

@@ -6,6 +6,7 @@ public class ReverseSinglyLinkedList {
         ListNode next;
         ListNode(int val) {
             this.val = val;
+            this.next = null;
         }
     }
 
@@ -27,11 +28,13 @@ public class ReverseSinglyLinkedList {
         node1.next.next = new ListNode(3);
         node1.next.next.next = new ListNode(4);
         node1.next.next.next.next = new ListNode(5);
-        node1.next.next.next.next.next = null;
 
         ListNode res = reverseList(node1);
 
-        System.out.println(res.val);
+        while (res != null){
+            System.out.println(res.val);
+        }
+
 
     }
 }
