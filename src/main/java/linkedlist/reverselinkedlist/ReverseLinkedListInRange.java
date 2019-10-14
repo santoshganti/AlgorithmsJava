@@ -1,4 +1,4 @@
-package reverselinkedlist;
+package linkedlist.reverselinkedlist;
 
 public class ReverseLinkedListInRange {
     static class ListNode {

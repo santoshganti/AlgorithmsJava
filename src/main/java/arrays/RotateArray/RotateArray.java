@@ -1,4 +1,4 @@
-package RotateArray;
+package arrays.RotateArray;
 
 public class RotateArray {
     private void rotateArrayUsingTempArray(int[] nums, int k) {
