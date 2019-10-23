@@ -60,6 +60,7 @@ public class BinarySearchTree {
             prev = node;
             return isBST(node.right);
         }
+        return false;
     }
 
     // Driver Program to test above functions
