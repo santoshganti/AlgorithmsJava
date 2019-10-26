@@ -1,6 +1,6 @@
 package binarytree;
 
-/*
+/**
     Tree is a hierarchical structure and main uses of the trees include maintaining hierarchical data
     providing moderate access and insert/delete operations. Binary trees are special cases of tree where
     every node has at most two children.
