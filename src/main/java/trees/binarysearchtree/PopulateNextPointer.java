@@ -1,4 +1,4 @@
-package binarysearchtree;
+package trees.binarysearchtree;
 
 public class PopulateNextPointer {
     static class TreeLinkNode {

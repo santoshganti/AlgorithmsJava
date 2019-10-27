@@ -1,15 +1,15 @@
-package heap;
+package trees.heap;
 
 /**
  * It's a complete tree except possibly the last level and even in that last level. All the keys are as left as possible.
  *
- * This property of the binary heap makes them suitable to be store in an array
+ * This property of the binary trees.heap makes them suitable to be store in an array
  *
- * Min Heap - the key at the root must be minimum among all the keys present in the binary heap. This must be
- * true for all the keys present in the binary heap.
+ * Min Heap - the key at the root must be minimum among all the keys present in the binary trees.heap. This must be
+ * true for all the keys present in the binary trees.heap.
  *
  * Max Heap - the key at the root must be the max among all the keys present in the binary tree. This must be recursively
- * true for all the keys in the binary heap.
+ * true for all the keys in the binary trees.heap.
  *
  *
  * Min Heap
