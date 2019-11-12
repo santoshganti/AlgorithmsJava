@@ -1,10 +1,8 @@
 package trees.binarytree;
 
-import java.util.Queue;
+import java.util.*;
 
 import trees.node.Node;
-
-import java.util.LinkedList;
 
 /**
  * Tree is a hierarchical structure and main uses of the trees include maintaining hierarchical data
@@ -217,10 +215,119 @@ public class BinaryTree {
         }
     }
 
+    public void spiralWithTwoStack(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        Stack<Node> s1 = new Stack<>();
+        Stack<Node> s2 = new Stack<>();
+        s1.push(root);
+
+        while (!s1.isEmpty() || !s2.isEmpty()) {
+            while (!s1.isEmpty()) {
+                root = s1.pop();
+                System.out.println(root.getValue() + " ");
+                if (root.getRight() != null) {
+                    s2.push(root.getRight());
+                }
+                if (root.getLeft() != null) {
+                    s2.push(root.getLeft());
+                }
+            }
+
+            while (!s2.isEmpty()) {
+                root = s2.pop();
+                System.out.println(root.getValue() + " ");
+                if (root.getRight() != null) {
+                    s1.push(root.getRight());
+                }
+                if (root.getLeft() != null) {
+                    s1.push(root.getLeft());
+                }
+            }
+        }
+
+    }
+
+    public List<List<Integer>> spiralWithOneDeque(Node root) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<Integer> li = new ArrayList<Integer>();
+        Queue<Node> queue = new LinkedList<Node>();
+        if (root == null) return res;
+        boolean flip = true;
+        int level = 1;
+
+        queue.add(root);
+        while (queue.size() != 0) {
+            Node node = queue.poll();
+            if (flip)
+                li.add(node.getValue());
+            else
+                li.add(0, node.getValue());
+
+            if (node.getLeft() != null)
+                queue.add(node.getLeft());
+            if (node.getRight() != null)
+                queue.add(node.getRight());
+            if (--level == 0) {
+                level = queue.size();
+                res.add(new ArrayList(li));
+                li.clear();
+                flip = !flip;
+            }
+        }
+        return res;
+    }
+
+    public List<List<Integer>> levelOrderList(Node root) {
+        //put root into queue
+        //while queue is not empty
+        //dequeu and put its children in the queue
+        //print the queue in natural order for level order
+        List<List<Integer>> levels = new ArrayList<>();
+        if (root == null) return levels;
+
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+
+        int level = 0;
+
+        while (!queue.isEmpty()) {
+            //start at current level
+            levels.add(new ArrayList<Integer>());
+
+            //number of elements in the current level
+            int levelLength = queue.size();
+
+            for (int i = 0; i < levelLength; i++) {
+                Node current = queue.remove();
+
+                //fill the level array
+                levels.get(level).add(current.getValue());
+
+                //add the children to the queue
+                if (current.getLeft() != null) {
+                    queue.add(current.getLeft());
+                }
+                if (current.getRight() != null) {
+                    queue.add(current.getRight());
+                }
+            }
+            level++;
+        }
+        return levels;
+    }
+
+    public void spiralWithOneDequeDelimiter(Node root) {
+
+    }
+
     //MARK - delete tree
     void deleteTree() {
         root = null;
         System.out.println("Binary tree has been deleted");
+//        List<List<Integer>> res = new ArrayList<>();
     }
 
 

@@ -1,4 +1,4 @@
-package arrays.queue;
+package queue;
 
 public class Queue {
     private static class Node {

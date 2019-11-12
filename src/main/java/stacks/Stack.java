@@ -1,4 +1,4 @@
-package arrays.stacks;
+package stacks;
 
 public class Stack {
     private static class Node {

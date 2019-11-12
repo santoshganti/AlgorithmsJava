@@ -47,6 +47,10 @@ public class BinaryTreeMain {
         System.out.println("\nDeleting node having value-50 in the tree...");
         tree.deleteNodeOfBinaryTree(50);
         tree.levelOrder();
+        tree.spiralWithOneDeque(tree.root);
+
+        System.out.println("\nSpiral Order traversal");
+        tree.spiralWithTwoStack(tree.root);
 
         System.out.println("\n\nDeleting node having value-10 in the tree...");
         tree.deleteNodeOfBinaryTree(10);

@@ -1,5 +1,8 @@
 package trie;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trie {
     private final TrieNode root;
 
@@ -62,6 +65,7 @@ public class Trie {
         //CASE 3 - Some other word is a prefix of this word (BCDE, BC)
         //CASE 4 - No one is dependent on this word (BCDE, BCDE)
 
+        List<List<Integer>> courses = new ArrayList<>();
         char ch = word.charAt(index);
         TrieNode currentNode = parentNode.children.get(ch);
 
@@ -85,7 +89,7 @@ public class Trie {
             }
         }
 
-        if (currentNode.endOfWord == true) {
+        if (currentNode.endOfWord) {
             System.out.println("Entering case 3");
             delete(currentNode, word, index + 1);
             return false;
@@ -93,7 +97,7 @@ public class Trie {
 
         System.out.println("Entering case 4");
         shouldDeleteNode = delete(currentNode, word, index + 1);
-        if (shouldDeleteNode == true) {
+        if (shouldDeleteNode) {
             System.out.println("Character " + ch + " has no dependency, hence deleting it");
             parentNode.children.remove(ch);
             return true;
