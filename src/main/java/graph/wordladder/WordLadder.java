@@ -6,7 +6,12 @@ import java.util.*;
 
 public class WordLadder {
     public static void main(String[] args) {
-        
+        String beiginWord = "hit";
+        String endWord = "cog";
+        List<String> wordList = Arrays.asList("hot","dot","dog","lot","log","cog");
+
+        int res = ladderLength(beiginWord,endWord,wordList);
+        System.out.println(res);
     }
     public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
         //all words are of same length
