@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class MinimumWindowSubstring {
     public String minWindowMethod2(String s, String t) {
-        if (s == null || t == null) return "";
+        if (s == null || t == null) {
+            return "";
+        }
 
         String res = "";
 
@@ -20,7 +22,9 @@ public class MinimumWindowSubstring {
         }
 
         for (int right = 0; right < s.length(); right++) {
-            if (--letterCount[s.charAt(right)] >= 0) count++;
+            if (--letterCount[s.charAt(right)] >= 0) {
+                count++;
+            }
 
             while (count == t.length()) {
                 if (minLen > right - left + 1) {
@@ -37,7 +41,7 @@ public class MinimumWindowSubstring {
 
         return res;
     }
-    
+
     public static void main(String[] args) {
         MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
         System.out.println(minimumWindowSubstring.minWindowMethod2("ADOBECODEBANC", "ABC"));
