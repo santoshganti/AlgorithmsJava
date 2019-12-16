@@ -1,4 +1,4 @@
-package design;
+package design.lru;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
