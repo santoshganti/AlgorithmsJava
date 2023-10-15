@@ -1,7 +1,7 @@
-using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using System.Net;
 
 /**
  * It's a complete tree except possibly the last level and even in that last level. All the keys are as left as possible.
