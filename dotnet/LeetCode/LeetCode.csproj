@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.19.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.0.13" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.14.0" />
   </ItemGroup>
   <ItemGroup>
@@ -25,6 +26,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext"/>
+    <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStructures\LinkedList\AddTwoNumbers\" />
+    <Folder Include="DataStructures\LinkedList\CopyListWithRandomPointer\" />
+    <Folder Include="DataStructures\LinkedList\MergeKSortedLists\" />
+    <Folder Include="DataStructures\LinkedList\MergeTwoSortedLists\" />
+    <Folder Include="DataStructures\LinkedList\DoublyLinkedList\" />
+    <Folder Include="DataStructures\LinkedList\LoopsInLinkedList\" />
+    <Folder Include="DataStructures\LinkedList\ReverseNodesInKGroup\" />
+    <Folder Include="DataStructures\LinkedList\ReverseLinkedLists\" />
+    <Folder Include="DataStructures\Trees\AVLTrees\" />
+    <Folder Include="DataStructures\Trees\Node\" />
+    <Folder Include="DesignPatterns\CreationalPatterns\" />
+    <Folder Include="DesignPatterns\StructuralPatterns\" />
+    <Folder Include="Graph\DijkstrasAlgorithm\" />
+    <Folder Include="Graph\KruskalsAlgorithm\" />
+    <Folder Include="Graph\PrimmsAlgorithm\" />
   </ItemGroup>
 </Project>
