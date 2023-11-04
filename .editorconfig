@@ -2,6 +2,10 @@
 indent_style = space
 indent_size = 4
 
+[*.java]
+indent_style = space
+indent_size = 4
+
 [*.{h,cc,cpp,cs,java,json}]
 indent_style = space
 indent_size = 4
