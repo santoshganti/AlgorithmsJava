@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class TreeHeights {
 
-    private static String TreeHeightsSolution1(int[] nums, int X) {
+    private static String TreeHeightsSolution1(int[] nums, int x) {
         int n = nums.length;
 
         int minN = Arrays.stream(nums).min().getAsInt();
@@ -37,7 +37,7 @@ public class TreeHeights {
             }
         }
 
-        return Arrays.stream(dp[n - 1]).min().getAsInt() <= X ? "YES " + Arrays.stream(dp[n - 1]).min().getAsInt() : "NO";
+        return Arrays.stream(dp[n - 1]).min().getAsInt() <= x ? "YES " + Arrays.stream(dp[n - 1]).min().getAsInt() : "NO";
     }
 
     public static void main(String[] args) {
