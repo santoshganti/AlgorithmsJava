@@ -25,6 +25,10 @@ public class AddTwoNumbers {
         return dummyHead.next;
     }
 
+    public static String TestFunction(String s1){
+        return null;
+    }
+
     public static class ListNode {
         int val;
         ListNode next;
