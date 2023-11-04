@@ -17,7 +17,7 @@ public class MergeTwoSortedLists {
         return list1;
     }
 
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
