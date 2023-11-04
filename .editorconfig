@@ -1,0 +1,11 @@
+[*]
+indent_style = space
+indent_size = 4
+
+[*.{h,cc,cpp,cs,java,json}]
+indent_style = space
+indent_size = 4
+
+[*.{conf,hosts.conf,fstab.conf}]
+indent_style = tab
+tab_width = 8
