@@ -10,7 +10,8 @@ public class EmployeeClient {
         employees.add(employeeFromDB);
 
         // You cannot do this without adapter
-        //Employee employeeFromLdap = new EmployeeLdap("chewie","solo","Han","han@solo.com");
+        // Employee employeeFromLdap = new
+        // EmployeeLdap("chewie","solo","Han","han@solo.com");
 
         EmployeeLdap employeeFromLdap = new EmployeeLdap("chewie", "solo", "Han", "han@solo.com");
 

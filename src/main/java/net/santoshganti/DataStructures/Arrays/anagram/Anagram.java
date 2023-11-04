@@ -17,8 +17,7 @@ public class Anagram {
         // For each character in input strings,
         // increment count in the corresponding
         // count array
-        for (i = 0; i < s.length() && i < t.length();
-             i++) {
+        for (i = 0; i < s.length() && i < t.length(); i++) {
             count1[s.charAt(i)]++;
             count2[t.charAt(i)]++;
         }

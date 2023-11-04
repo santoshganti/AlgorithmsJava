@@ -1,6 +1,5 @@
 package net.santoshganti.DesignPatterns.creationalpatterns.builder.burgers;
 
-
 import net.santoshganti.DesignPatterns.creationalpatterns.builder.model.Burger;
 
 public class VegBurger extends Burger {

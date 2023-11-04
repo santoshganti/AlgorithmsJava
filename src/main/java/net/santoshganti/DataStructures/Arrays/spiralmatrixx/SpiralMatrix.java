@@ -5,10 +5,10 @@ import java.util.List;
 
 public class SpiralMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
-        //go from left to right and decrease left counter
-        //go from right to down and decrease right counter
-        //go from right to left and
-        //go from left to
+        // go from left to right and decrease left counter
+        // go from right to down and decrease right counter
+        // go from right to left and
+        // go from left to
         List<Integer> res = new ArrayList();
 
         if (matrix.length == 0) {

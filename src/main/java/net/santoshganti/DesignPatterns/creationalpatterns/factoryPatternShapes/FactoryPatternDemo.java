@@ -7,7 +7,8 @@ import net.santoshganti.DesignPatterns.creationalpatterns.factoryPatternShapes.s
 /**
  * Creates an object hence a creational design pattern
  * <p>
- * Create objects without exposing the creation logic and refer to newly created objects
+ * Create objects without exposing the creation logic and refer to newly created
+ * objects
  * using common interface.
  */
 

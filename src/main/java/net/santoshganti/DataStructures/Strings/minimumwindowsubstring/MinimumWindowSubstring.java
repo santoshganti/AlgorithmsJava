@@ -15,8 +15,8 @@ public class MinimumWindowSubstring {
 
         int[] letterCount = new int[128];
 
-        int left = 0; //begining of the left window
-        int count = 0; //how many characters that are in T
+        int left = 0; // begining of the left window
+        int count = 0; // how many characters that are in T
         int minLen = Integer.MAX_VALUE;
 
         for (char c : t.toCharArray()) {

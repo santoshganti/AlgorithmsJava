@@ -2,6 +2,6 @@
 indent_style = space
 indent_size = 4
 
-[*.{h, cc, cpp, cs, java, json, xml, yml]
+[*.{h,  cc,  cpp,  cs,  java,  json,  xml,  yml]
 indent_style = space
 indent_size = 4

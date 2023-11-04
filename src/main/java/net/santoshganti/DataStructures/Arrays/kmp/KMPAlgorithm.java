@@ -1,6 +1,6 @@
 package net.santoshganti.DataStructures.Arrays.kmp;
 
-public class KMP {
+public class KMPAlgorithm {
     public static int strStr(String haystack, String needle) {
         char[] hay = haystack.toCharArray();
         char[] need = needle.toCharArray();

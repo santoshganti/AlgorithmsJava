@@ -15,36 +15,47 @@ public class MovieGenres {
         HashMap<String, List<String>> userBooksListenedTo = new HashMap<>();
         HashMap<String, List<String>> bookGenres = new HashMap<>();
 
-        userBooksListenedTo.put("Fred", new ArrayList<String>() {{
-            add("mass");
-            add("void");
-            add("stress");
-        }});
+        userBooksListenedTo.put("Fred", new ArrayList<String>() {
+            {
+                add("mass");
+                add("void");
+                add("stress");
+            }
+        });
 
-        userBooksListenedTo.put("Jenie", new ArrayList<String>() {{
-            add("happy");
-            add("pride");
-        }});
+        userBooksListenedTo.put("Jenie", new ArrayList<String>() {
+            {
+                add("happy");
+                add("pride");
+            }
+        });
 
-        userBooksListenedTo.put("Rone", new ArrayList<String>() {{
-            add("alexander");
-        }});
+        userBooksListenedTo.put("Rone", new ArrayList<String>() {
+            {
+                add("alexander");
+            }
+        });
 
-        bookGenres.put("Horror", new ArrayList<String>() {{
-            add("mass");
-            add("stress");
-        }});
+        bookGenres.put("Horror", new ArrayList<String>() {
+            {
+                add("mass");
+                add("stress");
+            }
+        });
 
-        bookGenres.put("Comedy", new ArrayList<String>() {{
-            add("happy");
-        }});
+        bookGenres.put("Comedy", new ArrayList<String>() {
+            {
+                add("happy");
+            }
+        });
 
-        bookGenres.put("Romance", new ArrayList<String>() {{
-            add("world");
-            add("alexander");
-            add("pride");
-        }});
-
+        bookGenres.put("Romance", new ArrayList<String>() {
+            {
+                add("world");
+                add("alexander");
+                add("pride");
+            }
+        });
 
         System.out.println(favoriteVideoGenre(numUsers, userBooksListenedTo, numGenres, bookGenres));
     }

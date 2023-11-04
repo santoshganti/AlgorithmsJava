@@ -26,7 +26,6 @@ public class ReverseSinglyLinkedList {
             System.out.println(res.val);
         }
 
-
     }
 
     static class ListNode {

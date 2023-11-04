@@ -18,11 +18,9 @@ public class EmployeeDB implements Employee {
         return id;
     }
 
-
     public String getFirstName() {
         return firstName;
     }
-
 
     public String getLastName() {
         return lastName;

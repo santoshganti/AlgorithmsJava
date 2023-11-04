@@ -7,7 +7,6 @@ public class EmployeeAdapterLdap implements Employee {
         this.instance = instance;
     }
 
-
     @Override
     public String getId() {
         return instance.getCn();

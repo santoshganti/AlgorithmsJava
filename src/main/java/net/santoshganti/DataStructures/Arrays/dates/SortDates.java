@@ -28,7 +28,6 @@ public class SortDates {
             }
         });
 
-
         return dates;
     }
 
@@ -45,12 +44,10 @@ public class SortDates {
         string.add("04 Nov 2030");
         string.add("28 Jul 1963");
 
-//        string.add("01 Mar 2017");
-//        string.add("03 Feb 2017");
-//        string.add("15 Jan 1998");
-
+        // string.add("01 Mar 2017");
+        // string.add("03 Feb 2017");
+        // string.add("15 Jan 1998");
 
         System.out.println(sortDates(string));
     }
 }
-

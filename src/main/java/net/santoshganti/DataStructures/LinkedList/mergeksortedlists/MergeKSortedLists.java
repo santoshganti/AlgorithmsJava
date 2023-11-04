@@ -25,9 +25,9 @@ public class MergeKSortedLists {
 
     public static void main(String[] args) {
         /*
-        1->4->5,
-        1->3->4,
-        2->6
+         * 1->4->5,
+         * 1->3->4,
+         * 2->6
          */
 
         ListNode list1 = new ListNode(1);
@@ -42,7 +42,6 @@ public class MergeKSortedLists {
         list3.next = new ListNode(6);
         ListNode[] lists = {list1, list2, list3};
         System.out.println(mergeKLists(lists));
-
 
     }
 

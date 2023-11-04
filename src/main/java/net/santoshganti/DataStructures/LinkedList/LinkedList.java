@@ -37,14 +37,14 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-//        LinkedList list = new LinkedList();
-//
-//        list.append(6);
-//        list.push(7);
-//        list.push(1);
-//        list.append(4);
-//        list.insertAfter(list.head.next, 8);
-//        list.printList();
+        // LinkedList list = new LinkedList();
+        //
+        // list.append(6);
+        // list.push(7);
+        // list.push(1);
+        // list.append(4);
+        // list.insertAfter(list.head.next, 8);
+        // list.printList();
 
         Node head = newNode(1);
         head.next = newNode(2);
@@ -77,12 +77,13 @@ public class LinkedList {
             return;
         }
 
-        //Create the node
+        // Create the node
         Node new_node = new Node(new_data);
-        //copy the next pointer from prev node because this node is replacing the prev node
+        // copy the next pointer from prev node because this node is replacing the prev
+        // node
         new_node.next = prev_node.next;
 
-        //now point prev node's next to new node to insert it
+        // now point prev node's next to new node to insert it
         prev_node.next = new_node;
     }
 
@@ -210,6 +211,5 @@ public class LinkedList {
             next = null;
         }
     }
-
 
 }

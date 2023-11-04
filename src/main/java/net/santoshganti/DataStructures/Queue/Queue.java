@@ -1,8 +1,8 @@
 package net.santoshganti.DataStructures.Queue;
 
 public class Queue {
-    private Node head; //remove from the head
-    private Node tail; // add  things here
+    private Node head; // remove from the head
+    private Node tail; // add things here
 
     public boolean isEmpty() {
         return head == null;

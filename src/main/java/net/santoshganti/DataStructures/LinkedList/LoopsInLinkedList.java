@@ -12,9 +12,11 @@ public class LoopsInLinkedList {
         return res;
     }
 
-    /* This function detects and counts loop
-    nodes in the list. If loop is not there
-    in then returns 0 */
+    /*
+     * This function detects and counts loop
+     * nodes in the list. If loop is not there
+     * in then returns 0
+     */
     static int countNodesinLoop(Node list) {
         Node slow_p = list, fast_p = list;
 
@@ -22,13 +24,15 @@ public class LoopsInLinkedList {
             slow_p = slow_p.next;
             fast_p = fast_p.next.next;
 
-        /* If slow_p and fast_p meet at some point
-        then there is a loop */
+            /*
+             * If slow_p and fast_p meet at some point
+             * then there is a loop
+             */
             if (slow_p == fast_p)
                 return countNodes(slow_p);
         }
 
-        /* Return 0 to indeciate that ther is no loop*/
+        /* Return 0 to indeciate that ther is no loop */
         return 0;
     }
 
@@ -38,7 +42,7 @@ public class LoopsInLinkedList {
         return temp;
     }
 
-    /* Driver program to test above function*/
+    /* Driver program to test above function */
     public static void main(String[] args) {
         Node head = newNode(1);
         head.next = newNode(2);

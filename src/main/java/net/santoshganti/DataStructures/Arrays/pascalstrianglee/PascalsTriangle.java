@@ -11,7 +11,8 @@ public class PascalsTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
 
-        //First row needs to be created and we will use this first row to create rest of the rows and it will contain the value 1
+        // First row needs to be created and we will use this first row to create rest
+        // of the rows and it will contain the value 1
         List<Integer> firstRow = new ArrayList<>();
         firstRow.add(1);
         triangle.add(firstRow);

@@ -12,7 +12,7 @@ public class Stack {
         return top.data;
     }
 
-    //Move the
+    // Move the
     public void push(int data) {
         Node node = new Node(data);
         node.next = top;

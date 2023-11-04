@@ -1,6 +1,5 @@
 package net.santoshganti.DesignPatterns.creationalpatterns.builder;
 
-
 import net.santoshganti.DesignPatterns.creationalpatterns.builder.model.Item;
 
 import java.util.ArrayList;

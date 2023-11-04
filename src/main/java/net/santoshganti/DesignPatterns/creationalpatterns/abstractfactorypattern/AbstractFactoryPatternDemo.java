@@ -1,6 +1,5 @@
 package net.santoshganti.DesignPatterns.creationalpatterns.abstractfactorypattern;
 
-
 import net.santoshganti.Base.shape.Shape;
 import net.santoshganti.Base.shape.ShapeType;
 import net.santoshganti.DesignPatterns.creationalpatterns.abstractfactorypattern.AbstractShapeFactories.AbstractFactory;
